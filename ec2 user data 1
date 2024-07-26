@@ -1,0 +1,10 @@
+#!/bin/bash
+#Install Apache Web Server and PHP
+sudo dnf install -y httpd 
+wget php-fpm php-mysqli php-json phph php-devel
+sudo dnf install mariadb105-server
+yum install -y httpd mysql php
+sudo wget https://awsrestartlab267.s3.us-west-2.amazonaws.com/lab267.zip
+sudo unzip lab267.zip -d /var/www/html/
+sudo systemctl start httpd
+sudo systemctl enable httpd
